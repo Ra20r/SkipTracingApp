@@ -25,7 +25,11 @@
                         <a href="/profile.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">Profile</span></a>
                     </li>
                 </ul>
-                <ul class="nav pcoded-inner-navbar" style="position: relative; top: 517px;">
+                <ul class="nav pcoded-inner-navbar" style="position: relative; top: 470px;">
+                    <li
+                        class="nav-item {% if 'support' in segment %} active {% endif %}">
+                        <a href="/support.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-help-circle"></i></span><span class="pcoded-mtext">Help and Support</span></a>
+                    </li>
                     <li 
                         class="nav-item">
                         <a href="{% url 'logout' %}" class="nav-link" ><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span></a>

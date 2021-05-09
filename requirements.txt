@@ -9,4 +9,4 @@ dj-database-url
 python-decouple
 gunicorn
 whitenoise
-decouple
+python-decouple

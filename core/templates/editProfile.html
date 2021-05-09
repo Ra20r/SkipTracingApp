@@ -1,0 +1,77 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}{% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Profile Editor</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="/profile.html">Profile Page</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:">Profile Editor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="string" class="form-control" id="firstName" placeholder="Original Data">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="string" class="form-control" id="lastName" placeholder="Original Data">
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">Email</label>
+                        <input type="string" class="form-control" id="email" placeholder="Original Data">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="string" class="form-control" id="address" placeholder="Original Data">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="string" class="form-control" id="city" placeholder="Original Data">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="string" class="form-control" id="state" placeholder="Original Data">
+                    </div>
+                    <div class="form-group">
+                        <label for="zcode">Zip-Code</label>
+                        <input type="string" class="form-control" id="zipcode" placeholder="Original Data">
+                    </div>
+                    <div class="form-group">
+                        <label for="pnumber">Phone number</label>
+                        <input type="string" class="form-control" id="phoneNo" placeholder="Original Data">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="confirmSanity">
+                        <label class="form-check-label" for="confirmSanity">Confirm to proceed</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -9,7 +9,7 @@
 
     <div class="pcoded-content">
         <div class="pcoded-inner-content">
-            <!-- [ breadcrumb ] start -->
+
             <div class="page-header">
                 <div class="page-block">
                     <div class="row align-items-center">
@@ -25,25 +25,113 @@
                     </div>
                 </div>
             </div>
-            <!-- [ breadcrumb ] end -->
-            <div class="main-body">
-                <div class="page-wrapper">
-                    <!-- [ Main Content ] start -->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>Dashboard card</h5>
-                                </div>
-                                <div class="card-block">
-                                    <p>Dashboard incoming here
-                                    </p>
-                                </div>
+            <div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-block">
+                                <h8>Total Skip Traced</h8><br><br>
+                                <h3>234</h3>
                             </div>
                         </div>
                     </div>
-                    <!-- [ Main Content ] end -->
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-block">
+                                <h8>Total Orders</h8><br><br>
+                                <h3>300</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-block">
+                                <h8>Total Spent</h8><br><br>
+                                <h3>$123.45</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-block">
+                                <h8>Pending Skip Traces</h8><br><br>
+                                <h3>66</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="col-sm-12" style="position: relative; bottom: 30px;">
+                <h5 class="mt-4">Plans</h5>
+                <hr>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">NextGen Single Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">NextGen Batch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">NextGen Monthly</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <p class="mb-0">$1.00 for each successful trace
+                            <form>
+                                <div class="form-group">
+                                    <input type="string" class="form-control" id="singleTracePlan">
+                                    <small class="form-text text-muted">Type in the number of traces you wish to buy</small>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="confirmSanity">
+                                    <label class="form-check-label" for="confirmSanity">The data given above is appropriate</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit and proceed to pay</button>
+                            </form>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <p class="mb-0">$0.18 for each row that is successfully traced
+                            <form>
+                                <div class="form-group">
+                                    <input type="string" class="form-control" id="batchTracePlan">
+                                    <small class="form-text text-muted">Type in the number of rows in your CSV</small>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="confirmSanity">
+                                    <label class="form-check-label" for="confirmSanity">The data given above is appropriate</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit and proceed to pay</button>
+                            </form>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                           <form>
+                            <div class="form-group">
+                                <label for="monthlyPlan">Choose the monthly plan you wish to buy</label>
+                                    <select class="form-control" id="monthlyPlan">
+                                        <option>1. $55 for 100 searches</option>
+                                        <option>2. $110 for 220 searches</option>
+                                        <option>3. $220 for 480 searches</option>
+                                    </select>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="confirmSanity">
+                                <label class="form-check-label" for="confirmSanity">The data given above is appropriate</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit and proceed to pay</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="position: relative; left: 15px; bottom: 20px">
+                <button type="button" onclick="document.location='/skipTrace.html'" class="btn btn-outline-success" data-toggle="tooltip">Skip Trace</button>
+                <button type="button" onclick="document.location='/profile.html'" class="btn btn-outline-warning" data-toggle="tooltip">Profile</button>
+                <button type="button" onclick="document.location='/support.html'" class="btn btn-outline-info" data-toggle="tooltip">Support</button>
+                <button type="button" onclick="document.location='{% url 'logout' %}'" class="btn btn-outline-danger" data-toggle="tooltip">Logout</button>
             </div>
         </div>
     </div>
