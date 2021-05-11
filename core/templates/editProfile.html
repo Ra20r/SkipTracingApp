@@ -30,41 +30,45 @@
                 <form>
                     <div class="form-group">
                         <label for="fname">First Name</label>
-                        <input type="string" class="form-control" id="firstName" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="firstName" data-checker="normie" placeholder="Original Data">
                     </div>
                     <div class="form-group">
                         <label for="lname">Last Name</label>
-                        <input type="string" class="form-control" id="lastName" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="lastName" data-checker="normie" placeholder="Original Data">
                     </div>
                     <div class="form-group">
                         <label for="mail">Email</label>
-                        <input type="string" class="form-control" id="email" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="email" data-checker="email" placeholder="Original Data">
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="string" class="form-control" id="address" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="address" data-checker="normie" placeholder="Original Data">
                     </div>
                     <div class="form-group">
                         <label for="city">City</label>
-                        <input type="string" class="form-control" id="city" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="city" data-checker="normie" placeholder="Original Data">
                     </div>
                     <div class="form-group">
                         <label for="state">State</label>
-                        <input type="string" class="form-control" id="state" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="state" data-checker="normie" placeholder="Original Data">
                     </div>
                     <div class="form-group">
                         <label for="zcode">Zip-Code</label>
-                        <input type="string" class="form-control" id="zipcode" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="zipcode" data-checker="numeric" placeholder="Original Data">
                     </div>
                     <div class="form-group">
                         <label for="pnumber">Phone number</label>
-                        <input type="string" class="form-control" id="phoneNo" placeholder="Original Data">
+                        <input type="string" class="form-control task" id="phoneNo" data-checker="pnumber" placeholder="Original Data">
                     </div>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="confirmSanity">
+                        <input type="checkbox" class="form-check-input" id="confirmSanity" onclick="check()">
                         <label class="form-check-label" for="confirmSanity">Confirm to proceed</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div id="errorDiv">
+
+                    </div>
+                    <br><br>
+                    <button type="submit" id ="submitBtn" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>

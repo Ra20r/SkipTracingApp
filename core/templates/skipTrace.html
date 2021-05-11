@@ -38,14 +38,17 @@
                         <form>
                             <div class="form-group">
                                 <label for="location">Location</label>
-                                <input type="string" class="form-control" id="singleSearchLocationInput" placeholder="Enter the location">
+                                <input type="string" class="form-control task" id="singleSearchLocationInput" placeholder="Enter the location" data-checker="normie">
                                 <small class="form-text text-muted">Type in a property address you are looking to skip trace.<br>We will send you the name of the homeowner to your registered e-mail address</small>
                             </div>
                             <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="confirmSanity">
+                                <input type="checkbox" class="form-check-input" id="confirmSanity" onclick="check()">
                                 <label class="form-check-label" for="confirmSanity">Confirm to proceed</label>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div id="errorDiv">
+                            </div>
+                            <br><br>
+                            <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -58,14 +61,14 @@
                             <form>
                                 <div class="form-group">
                                     <label for="location">Data File</label>
-                                    <input type="file" class="form-control" id="batchSearchLocationInput">
+                                    <input type="file" class="form-control" id="batchSearchLocationInput" data-checker="file">
                                     <small class="form-text text-muted">Submit a CSV file with the names and addresses for the trace, the number of queries should be within your availables traces.<br>The results will be mailed to you on your registered e-mail address</small>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="confirmSanity">
-                                    <label class="form-check-label" for="confirmSanity">Confirm to proceed</label>
+                                    <input type="checkbox" class="form-check-input" id="confirmSanityFile">
+                                    <label class="form-check-label" for="confirmSanityFile">Confirm to proceed</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" id="submitBtnFile" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
                     </div>

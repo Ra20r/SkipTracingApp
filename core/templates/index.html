@@ -16,7 +16,7 @@
                         <div class="col-md-12">
                             <div class="page-header-title">
                                 <h5 class="m-b-10">Dashboard</h5>
-                            </div>
+                            </div> 
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
                                 <li class="breadcrumb-item"><a href="javascript:">Dashboard</a></li>
@@ -81,14 +81,18 @@
                         <p class="mb-0">$1.00 for each successful trace
                             <form>
                                 <div class="form-group">
-                                    <input type="string" class="form-control" id="singleTracePlan">
+                                    <input type="string" class="form-control pill1" id="singleTracePlan" data-checker="numeric">
                                     <small class="form-text text-muted">Type in the number of traces you wish to buy</small>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="confirmSanity">
+                                    <input type="checkbox" class="form-check-input" id="confirmSanity" onclick="check_pill('pill1')">
                                     <label class="form-check-label" for="confirmSanity">The data given above is appropriate</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit and proceed to pay</button>
+                                <div class="errorDivpill1">
+            
+                                </div>
+                                <br><br>
+                                <button type="submit" id="submitBtn" class="btn btn-primary">Submit and proceed to pay</button>
                             </form>
                         </p>
                     </div>
@@ -96,14 +100,18 @@
                         <p class="mb-0">$0.18 for each row that is successfully traced
                             <form>
                                 <div class="form-group">
-                                    <input type="string" class="form-control" id="batchTracePlan">
+                                    <input type="string" class="form-control pill2" id="batchTracePlan" data-checker="numeric">
                                     <small class="form-text text-muted">Type in the number of rows in your CSV</small>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="confirmSanity">
+                                    <input type="checkbox" class="form-check-input" id="confirmSanity" onclick="check_pill('pill2')">
                                     <label class="form-check-label" for="confirmSanity">The data given above is appropriate</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit and proceed to pay</button>
+                                <div class="errorDivpill2">
+            
+                                </div>
+                                <br><br>
+                                <button type="submit" id="submitBtn" class="btn btn-primary">Submit and proceed to pay</button>
                             </form>
                         </p>
                     </div>
@@ -111,17 +119,21 @@
                            <form>
                             <div class="form-group">
                                 <label for="monthlyPlan">Choose the monthly plan you wish to buy</label>
-                                    <select class="form-control" id="monthlyPlan">
+                                    <select class="form-control pill3" id="monthlyPlan" data-checker="normie">
                                         <option>1. $55 for 100 searches</option>
                                         <option>2. $110 for 220 searches</option>
                                         <option>3. $220 for 480 searches</option>
                                     </select>
                             </div>
                             <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="confirmSanity">
+                                <input type="checkbox" class="form-check-input" id="confirmSanity"  onclick="check_pill('pill3')">
                                 <label class="form-check-label" for="confirmSanity">The data given above is appropriate</label>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit and proceed to pay</button>
+                            <div class="errorDivpill3">
+        
+                            </div>
+                            <br><br>
+                            <button type="submit" id="submitBtn" class="btn btn-primary">Submit and proceed to pay</button>
                         </form>
                     </div>
                 </div>
