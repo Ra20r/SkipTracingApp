@@ -1,0 +1,49 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Admin Plan Editor {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <div class="main-body">
+                <div class="page-wrapper">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Edit Plans</h5>
+                                </div>
+                                <div class="card-block">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Single Plan</label>
+                                            <input type="string" class="form-control task" id="singlePlan" data-checker="normie" placeholder="Original Data">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Batch Plan</label>
+                                            <input type="string" class="form-control task" id="batchPlan" data-checker="normie" placeholder="Original Data">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Monthly Plan</label>
+                                            <textarea cols="50" row="15" class="form-control" id="monthlyPlan" data-checker="normie" placeholder="Original Data"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -15,7 +15,7 @@ from .forms import LoginForm, SignUpForm
 
 def login_view(request):
     form = LoginForm(request.POST or None)
-
+    
     msg = None
 
     if request.method == "POST":
@@ -43,13 +43,15 @@ def register_user(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
+            firstName = form.cleaned_data.get("firstName")
+            lastName = form.cleaned_data.get("lastName")
             username = form.cleaned_data.get("username")
+            email = form.cleaned_data.get("email")
+            password = form.cleaned_data.get("password")
             raw_password = form.cleaned_data.get("password1")
-            user = authenticate(username=username, password=raw_password)
-
+            user = authenticate(firstName=firstName, lastName=lastName, username=username, password=password, email=email)
             msg     = 'User created - please <a href="/login">login</a>.'
             success = True
-            
             #return redirect("/login/")
 
         else:
@@ -57,4 +59,5 @@ def register_user(request):
     else:
         form = SignUpForm()
 
-    return render(request, "accounts/register.html", {"form": form, "msg" : msg, "success" : success })
+    return render(request, "accounts/register.html", {"form": form, "msg" : msg, "success" : success})
+

@@ -40,3 +40,10 @@ def pages(request):
     
         html_template = loader.get_template( 'page-500.html' )
         return HttpResponse(html_template.render(context, request))
+
+@login_required(login_url="/login/")
+def check(request):
+    if request.user.is_superuser:
+        return render(request, "adminPlanEdit.html")
+    else:
+        return render(request, "page-404.html")

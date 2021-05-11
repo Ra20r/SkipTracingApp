@@ -32,7 +32,17 @@
 
                     <form role="form" method="post" action="">
 
-                        {% csrf_token %}                    
+                        {% csrf_token %}
+                        
+                        <div class="input-group mb-3">
+                            {{ form.firstName }}
+                        </div>
+                        <span class="text-error">{{ form.firstName.errors }}</span>
+
+                        <div class="input-group mb-3">
+                            {{ form.lastName }}
+                        </div>
+                        <span class="text-error">{{ form.lastName.errors }}</span>
 
                         <div class="input-group mb-3">
                             {{ form.username }}
@@ -66,10 +76,6 @@
 
                     <p class="mb-0 text-muted">Already have an account? <a href="{% url 'login' %}" >Login</a></p>
                     <br />
-                    <p class="mb-2 text-muted">
-                        &copy; <a target="_blank" href="https://bit.ly/37fF9RT">CodedThemes</a> 
-                        - <a target="_blank" href="https://appseed.us/admin-dashboards/django-dashboard-dattaable">Django Datta Able</a>
-                    </p>
                 </div>
             </div>
         </div>
