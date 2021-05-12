@@ -19,19 +19,22 @@
                                     <h5>Edit Plans</h5>
                                 </div>
                                 <div class="card-block">
-                                    <form>
+                                    <form href="/editPlans" method="post">
+                                        {% csrf_token %}
                                         <div class="form-group">
                                             <label>Single Plan</label>
-                                            <input type="string" class="form-control task" id="singlePlan" data-checker="normie" placeholder="Original Data">
+                                            <input type="string" value= "{{ plans.single }}" class="form-control" name="singlePlan" placeholder="Original Data">
                                         </div>
                                         <div class="form-group">
                                             <label>Batch Plan</label>
-                                            <input type="string" class="form-control task" id="batchPlan" data-checker="normie" placeholder="Original Data">
+                                            <input type="string" value="{{ plans.batch }}" class="form-control" name="batchPlan" placeholder="Original Data">
                                         </div>
                                         <div class="form-group">
                                             <label>Monthly Plan</label>
-                                            <textarea cols="50" row="15" class="form-control" id="monthlyPlan" data-checker="normie" placeholder="Original Data"></textarea>
+                                            <textarea cols="50" row="15" class="form-control" name="monthlyPlan" placeholder="Original Data">{{ plans.monthly }}</textarea>
+                                            <h8>Please maintain the format for the monthly plan field. If you do not wish to update a field keep it untouched.</h8>
                                         </div>
+                                        <input type="submit" class="btn btn-outline-success" data-toggle="tooltip" value="Update">
                                     </form>
                                 </div>
                             </div>

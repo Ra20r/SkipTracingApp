@@ -15,7 +15,5 @@
     "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
     "engines": {
         "node": ">=10.0.0"
-    },
-    "dependencies": {},
-    "devDependencies": {}
+    }
 }
