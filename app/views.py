@@ -63,7 +63,7 @@ def update(request):
             for month in monthly:
                 print(month)
             plansDict["monthly"] = monthly;
-            f= open("core/templates/plans.json", "w")
+            f= open("core/config/plans.json", "w")
             json.dump(plansDict, f)
             f.close()
             context["plans"] = readPlans()
@@ -72,5 +72,5 @@ def update(request):
         return render(request, "page-404.html")
 
 def readPlans():
-    f= open("core/templates/plans.json")
+    f= open("core/config/plans.json")
     return json.load(f)
