@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-block">
                                 <h8>Total Skip Traced</h8><br><br>
-                                <h3>234</h3>
+                                <h3>{{ user.profile.total_skipTraces }}</h3>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         <div class="card">
                             <div class="card-block">
                                 <h8>Total Orders</h8><br><br>
-                                <h3>300</h3>
+                                <h3>{{ user.profile.total_orders }}</h3>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         <div class="card">
                             <div class="card-block">
                                 <h8>Total Spent</h8><br><br>
-                                <h3>$123.45</h3>
+                                <h3>${{ user.profile.total_spent }}</h3>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                         <div class="card">
                             <div class="card-block">
                                 <h8>Pending Skip Traces</h8><br><br>
-                                <h3>66</h3>
+                                <h3>{{ user.profile.pending_skipTraces }}</h3>
                             </div>
                         </div>
                     </div>
@@ -143,6 +143,7 @@
                 <button type="button" onclick="document.location='/skipTrace.html'" class="btn btn-outline-success" data-toggle="tooltip">Skip Trace</button>
                 <button type="button" onclick="document.location='/profile.html'" class="btn btn-outline-warning" data-toggle="tooltip">Profile</button>
                 <button type="button" onclick="document.location='/support.html'" class="btn btn-outline-info" data-toggle="tooltip">Support</button>
+                <button type="button" onclick="document.location='admin/'" class="btn btn-outline-info" data-toggle="tooltip">Admin</button>
                 <button type="button" onclick="document.location='{% url 'logout' %}'" class="btn btn-outline-danger" data-toggle="tooltip">Logout</button>
             </div>
         </div>

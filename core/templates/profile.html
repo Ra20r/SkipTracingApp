@@ -37,14 +37,14 @@
                                 </div>
                                 <div class="card-block">
                                     </i><h3>Welcome, {{ user.get_username }}!</h3>
-                                    <p>Name:</p>
+                                    <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
                                     <p>Address: {{ user.profile.address }}</p>
-                                    <p>City:</p>
-                                    <p>State:</p>
-                                    <p>Zip Code:</p>
-                                    <p>Phone:</p>
-                                    <p>Email:</p>
-                                    <p>SkipTraces done:</p> 
+                                    <p>City: {{ user.profile.city }}</p>
+                                    <p>State: {{ user.profile.state }}</p>
+                                    <p>Zip Code: {{ user.profile.zip_code }}</p>
+                                    <p>Phone: {{ user.profile.phone }}</p>
+                                    <p>Email: {{ user.email }}</p>
+                                    <p>SkipTraces done: {{ user.profile.total_skipTraces }}</p> 
                                     <button type="button" onclick="document.location='/auth-reset-pass.html'" class="btn btn-secondary" data-toggle="tooltip">Reset Password</button>
                                     <button type="button" onclick="document.location='/editProfile.html'" class="btn btn-secondary" data-toggle="tooltip">Edit Profile</button>
                                 </div>
