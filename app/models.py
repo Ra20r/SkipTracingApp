@@ -2,6 +2,15 @@
 
 from django.db import models
 from django.contrib.auth.models import User, AbstractUser
-
+from authentication.models import Profile
 # Create your models here.
 
+class History(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="history")
+    order_number = models.IntegerField(blank=True)
+    order_type = models.CharField(max_length=100, blank=True)
+    total_address = models.IntegerField(blank=True)
+    total_hits = models.IntegerField(blank=True)
+    hit_percentage = models.CharField(max_length=100, blank=True)
+    date = models.CharField(max_length=100, blank=True)
+    status = models.CharField(max_length=100, blank=True)
