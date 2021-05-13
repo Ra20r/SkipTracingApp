@@ -2,7 +2,6 @@
 
 from django.db import models
 from django.contrib.auth.models import User, AbstractUser
-from authentication.models import Profile
 # Create your models here.
 
 class History(models.Model):
@@ -14,3 +13,6 @@ class History(models.Model):
     hit_percentage = models.CharField(max_length=100, blank=True)
     date = models.CharField(max_length=100, blank=True)
     status = models.CharField(max_length=100, blank=True)
+
+    def __str__(self):
+        return f'{self.order_number}, {self.order_type}, {self.total_address}'

@@ -16,3 +16,6 @@ class Profile(models.Model):
     total_spent = models.FloatField(blank=True)
     pending_skipTraces = models.IntegerField(blank=True)
     available_skipTraces = models.IntegerField(blank=True)
+
+    def __str__(self):
+        return f'{self.address}, {self.city}, {self.state}'

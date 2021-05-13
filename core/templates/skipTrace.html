@@ -8,7 +8,7 @@
 {% block content %}
 
 <div class="card-body">
-    <button type="button" onclick="document.location='/'" class="btn btn-secondary">Available traces <span class="badge badge-dark" style="position:relative; left:10px">32</span></button>
+    <button type="button" onclick="document.location='/'" class="btn btn-secondary">Available traces <span class="badge badge-dark" style="position:relative; left:10px">{{ user.profile.available_skipTraces }}</span></button>
 </div>
 
 <div class="pcoded-content">
