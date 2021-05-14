@@ -75,24 +75,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {% for field in history %}
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <th scope="row">{{ field.order_number }}</th>
+                                        <td>{{ field.order_type }}</td>
+                                        <td>{{ field.total_address }}</td>
+                                        <td>{{ field.total_hits }}</td>
+                                        <td>{{ field.hit_percentage }}</td>
+                                        <td>{{ field.date }}</td>
+                                        <td>{{ field.status }}</td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>

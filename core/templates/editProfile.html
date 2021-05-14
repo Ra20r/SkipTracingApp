@@ -27,38 +27,39 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <form>
+                <form href="/editProfile" method="post">
+                    {% csrf_token %}
                     <div class="form-group">
-                        <label for="fname">First Name</label>
-                        <input type="string" class="form-control task" id="firstName" data-checker="normie" value="{{ user.first_name }}">
+                        <label for="firstName">First Name</label>
+                        <input type="string" class="form-control task" name="fname" id="firstName" data-checker="normie" value="{{ user.first_name }}">
                     </div>
                     <div class="form-group">
-                        <label for="lname">Last Name</label>
-                        <input type="string" class="form-control task" id="lastName" data-checker="normie" value="{{ user.last_name }}">
+                        <label for="lastName">Last Name</label>
+                        <input type="string" class="form-control task" name="lname" id="lastName" data-checker="normie" value="{{ user.last_name }}">
                     </div>
                     <div class="form-group">
-                        <label for="mail">Email</label>
-                        <input type="string" class="form-control task" id="email" data-checker="email" value="{{ user.email }}">
+                        <label for="email">Email</label>
+                        <input type="string" class="form-control task" name="mail" id="email" data-checker="email" value="{{ user.email }}">
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="string" class="form-control task" id="address" data-checker="normie" value="{{ user.profile.address }}">
+                        <input type="string" class="form-control task" name="address" id="address" data-checker="normie" value="{{ user.profile.address }}">
                     </div>
                     <div class="form-group">
                         <label for="city">City</label>
-                        <input type="string" class="form-control task" id="city" data-checker="normie" value="{{ user.profile.city }}">
+                        <input type="string" class="form-control task" name="city" id="city" data-checker="normie" value="{{ user.profile.city }}">
                     </div>
                     <div class="form-group">
                         <label for="state">State</label>
-                        <input type="string" class="form-control task" id="state" data-checker="normie" value="{{ user.profile.state }}">
+                        <input type="string" class="form-control task" name="state" id="state" data-checker="normie" value="{{ user.profile.state }}">
                     </div>
                     <div class="form-group">
-                        <label for="zcode">Zip-Code</label>
-                        <input type="string" class="form-control task" id="zipcode" data-checker="numeric" value="{{ user.profile.zip_code }}">
+                        <label for="zipcode">Zip-Code</label>
+                        <input type="string" class="form-control task" name="zcode" id="zipcode" data-checker="numeric" value="{{ user.profile.zip_code }}">
                     </div>
                     <div class="form-group">
-                        <label for="pnumber">Phone number</label>
-                        <input type="string" class="form-control task" id="phoneNo" data-checker="pnumber" value="{{ user.profile.phone }}">
+                        <label for="phoneNo">Phone number</label>
+                        <input type="string" class="form-control task" name="pNo" id="phoneNo" data-checker="pnumber" value="{{ user.profile.phone }}">
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="confirmSanity" onclick="check()">
@@ -68,7 +69,7 @@
 
                     </div>
                     <br><br>
-                    <button type="submit" id ="submitBtn" class="btn btn-primary">Submit</button>
+                    <input type="submit" id ="submitBtn" class="btn btn-primary"></button>
                 </form>
             </div>
         </div>

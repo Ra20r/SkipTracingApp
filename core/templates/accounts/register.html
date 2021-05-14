@@ -32,17 +32,7 @@
 
                     <form role="form" method="post" action="">
 
-                        {% csrf_token %}
-                        
-                        <div class="input-group mb-3">
-                            {{ form.firstName }}
-                        </div>
-                        <span class="text-error">{{ form.firstName.errors }}</span>
-
-                        <div class="input-group mb-3">
-                            {{ form.lastName }}
-                        </div>
-                        <span class="text-error">{{ form.lastName.errors }}</span>
+                        {% csrf_token %}                    
 
                         <div class="input-group mb-3">
                             {{ form.username }}
@@ -75,7 +65,6 @@
                     </form>
 
                     <p class="mb-0 text-muted">Already have an account? <a href="{% url 'login' %}" >Login</a></p>
-                    <br />
                 </div>
             </div>
         </div>

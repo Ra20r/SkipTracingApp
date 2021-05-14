@@ -1,9 +1,5 @@
-remove redundant fields from register.html
-(testing)remove models database and check models.py, add default fields in models
-History Table Display
-EditProfile Funtionality
 remove batch plans and integrate it with batch skipTrace
-reset password
-help and support
+
 payment system
 API
+reset password, help and support

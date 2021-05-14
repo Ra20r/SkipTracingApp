@@ -1,1 +1,1 @@
-{"single": "$1.00", "batch": "$0.18", "monthly": ["1. $55 for 100 searches", "2. $110 for 220 searches", "3. $220 for 480 searches"]}
+{"single": 1.0, "batch": 0.18, "monthly": [[55.0, 100], [110.0, 220], [220.0, 480]], "monthlyPretty": ["$55.0 for 100 searches.", "$110.0 for 220 searches.", "$220.0 for 480 searches."]}

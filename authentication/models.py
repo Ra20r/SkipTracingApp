@@ -6,16 +6,16 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    address = models.CharField(max_length=100, blank=True)
-    city = models.CharField(max_length=100, blank=True)
-    state = models.CharField(max_length=100, blank=True)
-    zip_code = models.CharField(max_length=100, blank=True)
-    phone = models.CharField(max_length=100, blank=True)
-    total_skipTraces = models.IntegerField(blank=True)
-    total_orders = models.IntegerField(blank=True)
-    total_spent = models.FloatField(blank=True)
-    pending_skipTraces = models.IntegerField(blank=True)
-    available_skipTraces = models.IntegerField(blank=True)
+    address = models.CharField(max_length=100, blank=True, default="NULL")
+    city = models.CharField(max_length=100, blank=True, default="NULL")
+    state = models.CharField(max_length=100, blank=True, default="NULL")
+    zip_code = models.CharField(max_length=100, blank=True, default="NULL")
+    phone = models.CharField(max_length=100, blank=True, default="NULL")
+    total_skipTraces = models.IntegerField(blank=True, default=0)
+    total_orders = models.IntegerField(blank=True, default=0)
+    total_spent = models.FloatField(blank=True, default=0.0)
+    pending_skipTraces = models.IntegerField(blank=True, default=0)
+    available_skipTraces = models.IntegerField(blank=True, default=0)
 
     def __str__(self):
-        return f'{self.address}, {self.city}, {self.state}'
+        return f'{self.address}, {self.total_orders}, {self.total_spent}'
