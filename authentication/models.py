@@ -6,11 +6,11 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    address = models.CharField(max_length=100, blank=True, default="NULL")
-    city = models.CharField(max_length=100, blank=True, default="NULL")
-    state = models.CharField(max_length=100, blank=True, default="NULL")
-    zip_code = models.CharField(max_length=100, blank=True, default="NULL")
-    phone = models.CharField(max_length=100, blank=True, default="NULL")
+    address = models.CharField(max_length=100, blank=True, default="")
+    city = models.CharField(max_length=100, blank=True, default="")
+    state = models.CharField(max_length=100, blank=True, default="")
+    zip_code = models.CharField(max_length=100, blank=True, default="")
+    phone = models.CharField(max_length=100, blank=True, default="")
     total_skipTraces = models.IntegerField(blank=True, default=0)
     total_orders = models.IntegerField(blank=True, default=0)
     total_spent = models.FloatField(blank=True, default=0.0)

@@ -12,6 +12,7 @@ from django.contrib.auth.models import User
 from django.forms.utils import ErrorList
 from django.http import HttpResponse
 from .forms import LoginForm, SignUpForm
+from .models import Profile
 
 def login_view(request):
     form = LoginForm(request.POST or None)
@@ -46,7 +47,8 @@ def register_user(request):
             username = form.cleaned_data.get("username")
             raw_password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=raw_password)
-
+            prof = Profile(user=user)
+            prof.save()
             msg     = 'User created - please <a href="/login">login</a>.'
             success = True
             
